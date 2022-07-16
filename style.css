@@ -219,6 +219,10 @@ header .navigation li a:hover
   {
     display: none;
   }
+.banner .content .imgbx{
+  width: 200px;
+  height: 20px;
+}
  header .navigation.active
   {
     width: 100%;
