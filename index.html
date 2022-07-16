@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Texts Typing Animation | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  
+  <header >
+    <a href="#" class="logo">Milan<span>.</span></a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navigation">
+          <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu();">About</a></li>
+          <li><a href="#service"onclick="toggleMenu();">Service</a></li>
+          <li><a href="#skills"onclick="toggleMenu();">Skills</a></li>
+          <li><a href="#teams"onclick="toggleMenu();">Teams</a></li>
+          <li><a href="#Contact"onclick="toggleMenu();">Contact</a></li>
+      </ul>
+  </header>
+
+   <section class="banner" id="banner">
+    <div class="content">
+     <div class="imgbx">
+      <img src="image/testi2.jpg" >
+    </div>
+  <div class="text">
+    <h4>-- Hello --</h4>
+    <h2> I'm <span>Milan</span>  </h2>
+  </div>
+</div>
+<div class="wrapper">
+    <div class="static-txt"> And I'm a</div>
+    <ul class="dynamic-txts">
+      <li><span>YouTuber</span></li>
+      <li><span>Designer</span></li>
+      <li><span>Developer</span></li>
+      <li><span>Freelancer</span></li>
+    </ul>
+ 
+ </div>
+<div class="txtt">
+  <p>Lorem ipsum dolor sit amet conskjjgjm jfgjfgj jfadipisit. Idolxjhfjfjjfjfjime aliquid!
+     <br>hrehdhdhhgrgrgguyfjfgbuf fs ff ffifi</p>
+<a href="#"  class="btn">Our Menu</a>
+
+ </div>
+ 
+ 
+  
+</section>
+<script type="text/javascript">
+  window.addEventListener('scroll',function(){
+      const header = document.querySelector('header');
+      header.classList.toggle("sticky",window.scrollY > 0);
+  });
+  
+function toggleMenu(){
+      const menuToggle = document.querySelector('.menuToggle');
+      const navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+  }
+
+</script>
+
+</body>
+</html>

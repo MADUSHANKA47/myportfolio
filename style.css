@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*      --------------- .navigation  bar css ------------------------*/
+header
+{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  display: flex;
+  transition: 0.5s;
+  z-index: 10000;
+  align-items: center;
+  padding: 40px 100px;
+}
+
+header.sticky
+{
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+
+header .logo
+{
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0;
+
+}
+header.sticky .logo
+{
+  color: #111;
+}
+
+header .logo span{
+  color: #ff0157;
+}
+
+header .navigation
+{
+  position: relative;
+  display:flex;
+}
+header .navigation li
+{
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navigation li a
+{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+header.sticky .navigation li a
+{
+  color: #111;
+}
+header .navigation li a:hover
+{
+  color: #ff0157;
+}
+
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #343F4F;
+  flex-direction: column;
+ 
+}
+.banner  .content
+{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.banner .content .imgbx{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 5px solid #ff0157;
+  overflow: hidden;
+}
+.banner .content .imgbx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner .content .text {
+  text-align: center;
+}
+.banner .content .text h2
+{
+    
+    color: #111;
+    font-size: 4em;
+    font-weight: 600;
+    color: #fff;
+}
+.banner .content .text h4
+{
+    font-weight: 600;
+    color: #fff;
+}
+.txtt  {
+  color: #fff;
+  text-align: center;
+  
+}
+
+.btn
+{
+  font-size: 1em;
+  color: #fff;
+  background: #ff0157;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-decoration: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+.btn:hover
+{
+  letter-spacing: 6px;
+}
+
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #ff0157;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 80px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #343F4F;
+  border-left: 2px solid #ff0157;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+
+
+
+/*-------------------- responsive--------------------*/
+  
+@media (max-width: 991px)
+{
+  header,
+  header.sticky
+  {
+    padding: 10px 20px;
+  }
+  header .navigation
+  {
+    display: none;
+  }
+ header .navigation.active
+  {
+    width: 100%;
+    height: calc(100% - 68px);
+    position: fixed;
+    top: 68px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+
+
+  }
+  header .navigation 
+  {
+    margin-left: 0;
+  }
+  header .navigation li a
+  {
+    color: #111;
+    font-size: 2.6em;
+  }
+  
+  .menuToggle
+  {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(image/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  
+  }
+  .menuToggle.active
+  {
+    background: url(image/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+header.sticky .menuToggle
+{
+  filter: invert(1);
+}
+
+.banner .content .text h4{
+  font-size: 2em;
+}
+.banner .content .text h2 {
+  font-size: 6em;
+  
+}
+.txtt p{
+  font-size: 25px;
+  font-weight: 400;
+}
+.wrapper .static-txt{
+ 
+  font-size: 50px;
+ 
+}
+.wrapper .dynamic-txts{
+
+  height: 90px;
+  line-height: 90px;
+ 
+}
+
+.dynamic-txts li{
+
+  font-size: 60px;
+  
+}
+.dynamic-txts li span{
+ 
+  line-height: 90px;
+}
+
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+}
+
+  
+@media (max-width: 432px)
+{
+
+
+.wrapper .static-txt {
+ 
+  font-size: 20px;
+
+}
+
+.txtt p{
+  font-size: 10px;
+  font-weight: 400;
+}  
+  
+.wrapper .dynamic-txts{
+
+  height: 30px;
+  line-height: 30px;
+ 
+}
+
+.dynamic-txts li{
+
+  font-size: 20px;
+  
+}
+.dynamic-txts li span{
+ 
+  line-height: 30px;
+}
+
+@keyframes slide {
+  100%{
+    top: -120px;
+  }
+}
+}
+
+
+
